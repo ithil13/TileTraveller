@@ -8,21 +8,23 @@
 # repeat until tile 3,3 is reached
 # print Victory!
 
-location = 1.1
-north = "n","N"
-south = "s","S"
-west = "w","W"
-east = "e","E"
+# github: https://github.com/ithil13/TileTraveller
 
-while location != 3.3:
-    if location == 1.1 or location == 2.1:
+location = 1.1
+north = ["n","N"]
+south = ["s","S"]
+west = ["w","W"]
+east = ["e","E"]
+
+while round(location, 1) != 3.1:
+    if round(location, 1) == 1.1 or round(location, 1) == 2.1:
         print("You can travel: (N)orth.")
         move = input("Direction: ")
         if move in north:
             location += 0.1
         else:
             print("Not a valid direction!")
-    elif location == 1.2:
+    if round(location, 1) == 1.2:
         print("You can travel: (N)orth or (E)ast or (S)outh.")
         move = input("Direction: ")
         if move in north:
@@ -33,7 +35,7 @@ while location != 3.3:
             location -= 0.1
         else:
             print("Not a valid direction!")
-    elif location == 1.3:
+    if round(location, 1) == 1.3:
         print("You can travel: (E)ast or (S)outh.")
         move = input("Direction: ")
         if move in east:
@@ -42,7 +44,7 @@ while location != 3.3:
             location -= 0.1
         else:
             print("Not a valid direction!")
-    elif location == 2.2 or location == 3.3:
+    if round(location, 1) == 2.2 or round(location, 1) == 3.3:
         print("You can travel: (S)outh or (W)est.")
         move = input("Direction: ")
         if move in south:
@@ -51,7 +53,7 @@ while location != 3.3:
             location -= 1.0
         else:
             print("Not a valid direction!")
-    elif location == 2.3:
+    if round(location, 1) == 2.3:
         print("You can travel: (E)ast or (W)est.")
         move = input("Direction: ")
         if move in east:
@@ -60,7 +62,7 @@ while location != 3.3:
             location -= 1.0
         else:
             print("Not a valid direction!")
-    elif location == 3.2:
+    if round(location, 1) == 3.2:
         print("You can travel: (N)orth or (S)outh.")
         move = input("Direction: ")
         if move in north:

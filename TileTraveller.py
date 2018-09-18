@@ -20,56 +20,62 @@ while round(location, 1) != 3.1:
     if round(location, 1) == 1.1 or round(location, 1) == 2.1:
         print("You can travel: (N)orth.")
         move = input("Direction: ")
-        if move in north:
-            location += 0.1
-        else:
+        while move not in north:
             print("Not a valid direction!")
+            move = input("Direction: ")
+        else:
+            location += 0.1
     if round(location, 1) == 1.2:
         print("You can travel: (N)orth or (E)ast or (S)outh.")
         move = input("Direction: ")
+        while move not in north and move not in east and move not in south:
+            print("Not a valid direction!")
+            move = input("Direction: ")
         if move in north:
             location += 0.1
-        elif move in east:
+        if move in east:
             location += 1.0
-        elif move in south:
-            location -= 0.1
-        else:
-            print("Not a valid direction!")
+        if move in south:
+            location -= 0.1            
     if round(location, 1) == 1.3:
         print("You can travel: (E)ast or (S)outh.")
         move = input("Direction: ")
+        while move not in east and move not in south:
+            print("Not a valid direction!")
+            move = input("Direction: ")
         if move in east:
             location += 1.0
-        elif move in south:
+        if move in south:
             location -= 0.1
-        else:
-            print("Not a valid direction!")
     if round(location, 1) == 2.2 or round(location, 1) == 3.3:
         print("You can travel: (S)outh or (W)est.")
         move = input("Direction: ")
+        while move not in south and move not in west:
+            print("Not a valid direction!")
+            move = input("Direction: ")
         if move in south:
             location -= 0.1
-        elif move in west:
+        if move in west:
             location -= 1.0
-        else:
-            print("Not a valid direction!")
     if round(location, 1) == 2.3:
         print("You can travel: (E)ast or (W)est.")
         move = input("Direction: ")
+        while move not in east and move not in west:
+            print("Not a valid direction!")
+            move = input("Direction: ")
         if move in east:
             location += 1.0
-        elif move in west:
+        if move in west:
             location -= 1.0
-        else:
-            print("Not a valid direction!")
     if round(location, 1) == 3.2:
         print("You can travel: (N)orth or (S)outh.")
         move = input("Direction: ")
+        while move not in north and move not in south:
+            print("Not a valid direction!")
+            move = input("Direction: ")
         if move in north:
             location += 0.1
-        elif move in south:
+        if move in south:
             location -= 0.1
-        else:
-            print("Not a valid direction!")
 else:
     print("Victory!")

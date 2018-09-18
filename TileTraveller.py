@@ -1,12 +1,13 @@
 # Asignment 8
 # Guðrún Helga Finnsdóttir
 
-# print available directions
-# get input for chosen direction
-# check if valid direction
-# move to new tile
-# repeat until tile 3,3 is reached
-# print Victory!
+# 1 print available directions
+# 2 get input for chosen direction
+# 3 check if direction is valid
+# 4 if not valid repeat 2 and 3 as needed
+# 5 move to new tile
+# 6 repeat until tile 3,3 is reached
+# 7 print Victory!
 
 # github: https://github.com/ithil13/TileTraveller
 

@@ -28,13 +28,13 @@ def print_directions(position):
     if round(position, 1) == 1.1 or round(position, 1) == 2.1:
         print("You can travel: (N)orth.")
     if round(position, 1) == 1.2:
-        print("You can travel: (N)orth or (S)outh or (E)ast.")
+        print("You can travel: (N)orth or (E)ast or (S)outh.")
     if round(position, 1) == 1.3:
-        print("You can travel: (S)outh or (E)ast.")
+        print("You can travel: (E)ast or (S)outh.")
     if round(position, 1) == 2.2 or round(position, 1) == 3.3:
         print("You can travel: (S)outh or (W)est.")
     if round(position, 1) == 2.3:
-        print("You can travel: (W)est or (E)ast.")
+        print("You can travel: (E)ast or (W)est.")
     if round(position, 1) == 3.2:
         print("You can travel: (N)orth or (S)outh.")
 
